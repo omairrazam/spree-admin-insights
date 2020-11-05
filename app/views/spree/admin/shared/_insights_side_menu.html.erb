@@ -1,5 +1,5 @@
 <% if can? :admin, Spree::Admin::InsightsController %>
   <ul class="nav nav-sidebar border-bottom">
-    <%= main_menu_tree Spree.t(:returns), icon: "transfer", sub_menu: "returns", url: "#sidebar-returns" %>
+    <%= main_menu_tree Spree.t(:tab_heading, scope: :insight), icon: "stats", sub_menu: "insights", url: "#sidebar-insights" %>
   </ul>
 <% end %>
