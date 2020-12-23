@@ -15,7 +15,7 @@ class Spree::SalesPerformanceReport::ProfitLossChart
         },
         xAxis: { categories: @time_series },
         yAxis: {
-          title: { text: 'Value($)' }
+          title: { text: "value(#{INSIGHT_CHART_CURRENCY})" }
         },
         legend: {
           layout: 'vertical',
@@ -26,7 +26,7 @@ class Spree::SalesPerformanceReport::ProfitLossChart
         series: [
           {
             name: 'Profit Loss',
-            tooltip: { valuePrefix: '$' },
+            tooltip: { valuePrefix: "#{INSIGHT_CHART_CURRENCY}" },
             data: @data
           }
         ]

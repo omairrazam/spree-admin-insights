@@ -18,9 +18,9 @@ class Spree::SalesPerformanceReport::SaleCostPriceChart
         },
         xAxis: { categories: @time_series },
         yAxis: {
-          title: { text: 'Value($)' }
+          title: { text: "value(#{INSIGHT_CHART_CURRENCY})" }
         },
-        tooltip: { valuePrefix: '$' },
+        tooltip: { valuePrefix: "#{INSIGHT_CHART_CURRENCY}" },
         legend: {
           layout: 'vertical',
           align: 'right',
